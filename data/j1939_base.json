@@ -1,0 +1,254 @@
+{
+  "_comment": "Open J1939 PGN/SPN base database. Common signals from arthithadee/J1939-DBC-Database and SAE public docs.",
+  "pgns": {
+    "0xF004": {
+      "name": "EEC1",
+      "full_name": "Electronic Engine Controller 1",
+      "rate_ms": 20,
+      "spns": {
+        "190": {
+          "name": "EngineSpeed",
+          "label": "Engine Speed",
+          "scale": 0.125,
+          "offset": 0.0,
+          "unit": "rpm",
+          "min": 0.0,
+          "max": 8031.875,
+          "gauge_type": "tachometer",
+          "byte_start": 3,
+          "byte_len": 2
+        },
+        "513": {
+          "name": "EngineActualTorquePercentage",
+          "label": "Engine Torque %",
+          "scale": 1.0,
+          "offset": -125.0,
+          "unit": "%",
+          "min": -125.0,
+          "max": 125.0,
+          "gauge_type": "bar",
+          "byte_start": 2,
+          "byte_len": 1
+        },
+        "512": {
+          "name": "DriversDemandEnginePercentTorque",
+          "label": "Driver Demand Torque %",
+          "scale": 1.0,
+          "offset": -125.0,
+          "unit": "%",
+          "min": -125.0,
+          "max": 125.0,
+          "gauge_type": "bar",
+          "byte_start": 1,
+          "byte_len": 1
+        }
+      }
+    },
+    "0xFEF1": {
+      "name": "CCVS1",
+      "full_name": "Cruise Control / Vehicle Speed 1",
+      "rate_ms": 100,
+      "spns": {
+        "84": {
+          "name": "WheelBasedVehicleSpeed",
+          "label": "Vehicle Speed",
+          "scale": 0.00390625,
+          "offset": 0.0,
+          "unit": "km/h",
+          "min": 0.0,
+          "max": 250.996,
+          "gauge_type": "speedometer",
+          "byte_start": 1,
+          "byte_len": 2
+        }
+      }
+    },
+    "0xFEEE": {
+      "name": "ET1",
+      "full_name": "Engine Temperature 1",
+      "rate_ms": 1000,
+      "spns": {
+        "110": {
+          "name": "EngineCoolantTemperature",
+          "label": "Coolant Temp",
+          "scale": 1.0,
+          "offset": -40.0,
+          "unit": "°C",
+          "min": -40.0,
+          "max": 210.0,
+          "gauge_type": "thermometer",
+          "byte_start": 0,
+          "byte_len": 1
+        },
+        "174": {
+          "name": "EngineFuelTemperature",
+          "label": "Fuel Temperature",
+          "scale": 1.0,
+          "offset": -40.0,
+          "unit": "°C",
+          "min": -40.0,
+          "max": 210.0,
+          "gauge_type": "thermometer",
+          "byte_start": 1,
+          "byte_len": 1
+        }
+      }
+    },
+    "0xFEEF": {
+      "name": "EFL_P1",
+      "full_name": "Engine Fluid Level / Pressure 1",
+      "rate_ms": 500,
+      "spns": {
+        "100": {
+          "name": "EngineOilPressure",
+          "label": "Oil Pressure",
+          "scale": 4.0,
+          "offset": 0.0,
+          "unit": "kPa",
+          "min": 0.0,
+          "max": 1000.0,
+          "gauge_type": "bar",
+          "byte_start": 3,
+          "byte_len": 1
+        },
+        "111": {
+          "name": "EngineCoolantLevel",
+          "label": "Coolant Level",
+          "scale": 0.4,
+          "offset": 0.0,
+          "unit": "%",
+          "min": 0.0,
+          "max": 100.0,
+          "gauge_type": "bar",
+          "byte_start": 0,
+          "byte_len": 1
+        }
+      }
+    },
+    "0xFEF2": {
+      "name": "LFE",
+      "full_name": "Fuel Economy (Liquid)",
+      "rate_ms": 100,
+      "spns": {
+        "183": {
+          "name": "EngineFuelRate",
+          "label": "Fuel Rate",
+          "scale": 0.05,
+          "offset": 0.0,
+          "unit": "L/h",
+          "min": 0.0,
+          "max": 3212.75,
+          "gauge_type": "numeric",
+          "byte_start": 0,
+          "byte_len": 2
+        },
+        "184": {
+          "name": "InstantaneousFuelEconomy",
+          "label": "Fuel Economy",
+          "scale": 0.001953125,
+          "offset": 0.0,
+          "unit": "km/L",
+          "min": 0.0,
+          "max": 125.5,
+          "gauge_type": "numeric",
+          "byte_start": 2,
+          "byte_len": 2
+        }
+      }
+    },
+    "0xFEE5": {
+      "name": "HOURS",
+      "full_name": "Engine Hours / Revolutions",
+      "rate_ms": 1000,
+      "spns": {
+        "247": {
+          "name": "EngineTotalHoursOperation",
+          "label": "Engine Hours",
+          "scale": 0.05,
+          "offset": 0.0,
+          "unit": "h",
+          "min": 0.0,
+          "max": 210554060.75,
+          "gauge_type": "numeric",
+          "byte_start": 0,
+          "byte_len": 4
+        }
+      }
+    },
+    "0xFEF0": {
+      "name": "ETC1",
+      "full_name": "Electronic Transmission Controller 1",
+      "rate_ms": 100,
+      "spns": {
+        "191": {
+          "name": "OutputShaftSpeed",
+          "label": "Output Shaft Speed",
+          "scale": 0.125,
+          "offset": 0.0,
+          "unit": "rpm",
+          "min": 0.0,
+          "max": 8031.875,
+          "gauge_type": "tachometer",
+          "byte_start": 2,
+          "byte_len": 2
+        }
+      }
+    },
+    "0xFEAE": {
+      "name": "AIR1",
+      "full_name": "Air Supply Pressure",
+      "rate_ms": 1000,
+      "spns": {
+        "1087": {
+          "name": "PneumaticSupplyPressure",
+          "label": "Air Supply Pressure",
+          "scale": 2.0,
+          "offset": 0.0,
+          "unit": "kPa",
+          "min": 0.0,
+          "max": 500.0,
+          "gauge_type": "bar",
+          "byte_start": 0,
+          "byte_len": 1
+        }
+      }
+    },
+    "0xFECA": {
+      "name": "DM1",
+      "full_name": "Active Diagnostic Trouble Codes",
+      "rate_ms": 1000,
+      "spns": {
+        "1213": {
+          "name": "MalfunctionIndicatorLampStatus",
+          "label": "MIL Status",
+          "scale": 1.0,
+          "offset": 0.0,
+          "unit": "",
+          "min": 0.0,
+          "max": 3.0,
+          "gauge_type": "led",
+          "byte_start": 0,
+          "byte_len": 1
+        }
+      }
+    }
+  },
+  "source_addresses": {
+    "0x00": "Engine #1 (ECM)",
+    "0x01": "Engine #2",
+    "0x03": "Turbocharger",
+    "0x10": "Transmission",
+    "0x11": "Transmission #2",
+    "0x17": "Forward Road Image Processing Unit",
+    "0x21": "Brakes System Controller",
+    "0x27": "Chassis Controller #1",
+    "0x28": "Chassis Controller #2",
+    "0x2A": "Fuel System",
+    "0x33": "Instrument Cluster #1",
+    "0x3D": "Body Controller",
+    "0xF9": "Off-board Diagnostic #1",
+    "0xFA": "Reserved (external tools)",
+    "0xFE": "Null Address",
+    "0xFF": "Global (broadcast)"
+  }
+}
