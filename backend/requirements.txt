@@ -1,0 +1,8 @@
+fastapi==0.136.3
+uvicorn[standard]==0.34.3
+python-multipart==0.0.20
+websockets==15.0.1
+pydantic==2.11.5
+python-can==4.6.1
+cantools==41.4.2
+asammdf==8.8.16
