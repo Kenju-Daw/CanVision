@@ -1,4 +1,21 @@
-# CAN Vision
+# CAN Vision — superseded
+
+> [!IMPORTANT]
+> **This repository is no longer the product. It is a parts donor and it is not maintained.**
+>
+> The active trunk is **`Kenju-Daw/spectraq-vision`** (product: *Engineering Workspace* /
+> **CanVision Pro**). This was the second of two prior attempts at the same idea — see
+> **[CLAUDE.md](CLAUDE.md)** for exactly what (little) here is still worth referencing: the
+> `docs/ESP32_SETUP.md` hardware BOM, and nothing else. The firmware architecture it describes
+> (ESP32 as a WiFi AP, streaming to a browser over WebSocket) does not work with the trunk, which
+> only ever connects over USB-serial.
+>
+> **If you are an AI agent:** do not resume Phase 2/3 feature work here, and do not open pull
+> requests against this repo. Read `CLAUDE.md`, then work in the trunk.
+
+---
+
+*Historical README follows, describing intent for a project that stopped at Phase 1.*
 
 Open-source, OS-agnostic CAN bus / J1939 instrument cluster platform. Runs entirely in a browser — no installs, no OS dependency, no license fees.
 
